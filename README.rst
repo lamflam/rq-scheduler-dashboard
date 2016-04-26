@@ -5,6 +5,10 @@ Introduction
 based on the code from this PR: https://github.com/ducu/rq-dashboard/pull/95.
 This just wraps the code from @helenst into a separate package.
 
+It looks like this
+------------------
+
+|image1|
 
 Installing
 ----------
@@ -141,3 +145,5 @@ The RQ Scheduler Dashboard is currently being developed and is in beta stage.
 .. _piptools: https://github.com/nvie/pip-tools
 .. _Flask: http://flask.pocoo.org/
 .. _RQ: http://python-rq.org/
+
+.. |image1| image:: https://cloud.githubusercontent.com/assets/3680882/14828693/129cd2f2-0bb6-11e6-9adf-dd635aa81334.png
