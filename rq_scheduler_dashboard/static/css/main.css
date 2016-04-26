@@ -1,0 +1,124 @@
+/* @override http://localhost:9181/static/css/main.css */
+
+body {
+    background-color: black;
+}
+
+.container {
+    background: white;
+    margin-top: 3em;
+}
+
+#content {
+    background: yellow;
+}
+
+.section
+{
+    padding: 2em;
+}
+
+p.intro {
+    min-height: 2em;
+    padding-top: .8em;
+    color: #888;
+}
+
+p.fixed.intro {
+    height: 5em;
+}
+
+h1 {
+    font-family: 'Helvetica Neue', helvetica, sans-serif;
+    font-weight: 300;
+    color: steelblue;
+    text-shadow: 0 -1px #229;
+}
+
+h1 strong {
+    font-weight: 500;
+}
+
+h1 strong.failed {
+    color: red;
+    text-shadow: 0 -1px #922;
+}
+
+table, table tr, table tr td {
+    background-color: snow;
+}
+
+table tbody tr td.narrow {
+    width: 100px;
+}
+
+table#queues {
+    /*width: 300px;*/
+}
+
+table#jobs td.actions a {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+table#jobs span.description {
+    color: #555;
+    font-weight: 600;
+}
+
+table#jobs span.origin {
+    color: #888;
+}
+
+table#jobs div.job_id {
+    font-size: 70%;
+    color: gray;
+    margin-left: 24px;
+}
+
+table#jobs pre.exc_info {
+    font-size: 80%;
+    color: #555;
+    margin-left: 24px;
+    border-left: 2px solid darkorange;
+    background-color: lightgoldenrodyellow;
+}
+
+table#jobs span.creation_date {
+    font-size: 80%;
+}
+
+table#jobs span.end_date {
+    font-size: 80%;
+    margin-left: 24px;
+}
+
+table#jobs span.scheduled_date {
+    font-size: 80%;
+}
+
+table#workers {
+    /*width: 600px;*/
+}
+
+table tbody tr td {
+    vertical-align: middle;
+}
+
+table tr.failed {
+    color: red;
+    border-top: 2px solid red;
+}
+
+table tr.failed a {
+    color: red;
+}
+
+table tr.failed td {
+    background-color: lightgoldenrodyellow;
+}
+
+span.loading {
+    font-size: .8em;
+    color: #555;
+}

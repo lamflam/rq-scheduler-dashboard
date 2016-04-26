@@ -1,0 +1,68 @@
+import os
+from setuptools import setup, find_packages
+
+
+def get_version():
+    basedir = os.path.dirname(__file__)
+    with open(os.path.join(basedir, 'rq_scheduler_dashboard/version.py')) as f:
+        locals = {}
+        exec(f.read(), locals)
+        return locals['VERSION']
+    raise RuntimeError('No version info found.')
+
+
+setup(
+    name='rq-scheduler-dashboard',
+    version=get_version(),
+    url='https://github.com/lamflam/rq-scheduler-dashboard',
+    license='BSD',
+    author='Kevin LaFlamme',
+    author_email='laflamme.kevin@gmail.com',
+    description='rq-scheduler-dashboard is a copy of rq-dashboard for rq-scheduler jobs, '
+                'based on the code from this PR: https://github.com/ducu/rq-dashboard/pull/95',
+    long_description=__doc__,
+    packages=find_packages(),
+    include_package_data=True,
+    zip_safe=False,
+    platforms='any',
+    # Be specific about versions in requirements.txt and just name packages
+    # needed during run time here.
+    # See e.g. https://caremad.io/2013/07/setup-vs-requirement/
+    install_requires=['rq>=0.3.8', 'rq-scheduler', 'Flask', 'redis', 'arrow'],
+    entry_points={
+        'console_scripts': [
+            'rq-scheduler-dashboard = rq_scheduler_dashboard.cli:main'
+        ]
+    },
+    classifiers=[
+        # As from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+        #'Development Status :: 1 - Planning',
+        #'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 3 - Alpha',
+        #'Development Status :: 4 - Beta',
+        #'Development Status :: 5 - Production/Stable',
+        #'Development Status :: 6 - Mature',
+        #'Development Status :: 7 - Inactive',
+        'Intended Audience :: Developers',
+        'Intended Audience :: End Users/Desktop',
+        'Intended Audience :: Information Technology',
+        'Intended Audience :: Science/Research',
+        'Intended Audience :: System Administrators',
+        'License :: OSI Approved :: BSD License',
+        'Operating System :: POSIX',
+        'Operating System :: MacOS',
+        'Operating System :: Unix',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.4',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+        'Topic :: Internet',
+        'Topic :: Scientific/Engineering',
+        'Topic :: System :: Distributed Computing',
+        'Topic :: System :: Systems Administration',
+        'Topic :: System :: Monitoring',
+    ]
+)
