@@ -1,8 +1,9 @@
 Introduction
 ============
 
-``rq-scheduler-dashboard`` is a copy of rq-scheduler-dashboard for rq-scheduler jobs,
-based on the code from this PR: https://github.com/ducu/rq-dashboard/pull/95
+``rq-scheduler-dashboard`` is a copy of rq-dashboard for rq-scheduler jobs,
+based on the code from this PR: https://github.com/ducu/rq-dashboard/pull/95.
+This just wraps the code from @helenst into a separate package.
 
 
 Installing
