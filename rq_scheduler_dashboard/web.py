@@ -160,7 +160,7 @@ def list_jobs(queue_name, page):
     scheduler = Scheduler(queue_name)
     jobs = scheduler.get_jobs(with_times=True)
     if queue_name:
-        jobs = filter(lambda (job, _): job.origin == queue_name, jobs)
+        jobs = filter(lambda job_: job_[0].origin == queue_name, jobs)
 
     per_page = 5
     total_items = len(jobs)
